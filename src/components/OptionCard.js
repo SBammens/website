@@ -143,7 +143,7 @@ const OptionCard = ({options}) => {
                             <li key={bulpoint}>{bulpoint}</li>
                         ))}
                     </BulletPoints>
-                    <ButtonLink to={`/Services/${options[0]}`}>
+                    <ButtonLink to={`/Services`}>{/* <ButtonLink to={`/${options[0]}`}> */}
                         <Button>Get started!</Button>
                     </ButtonLink>
                 </Card>

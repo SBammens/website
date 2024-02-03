@@ -1,7 +1,11 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import {BrowserView, MobileView} from 'react-device-detect';
+import { Link } from 'react-router-dom';
 
-import codingImg from '../assets/code.jpg';
+import websiteIcon from '../assets/responsive-design.png';
+import automationIcon from '../assets/automation.png';
+import customIcon from '../assets/ide.png';
 
 const OnloadImgAnimation = keyframes`
     0% {
@@ -64,16 +68,24 @@ const CardDiv = styled.div`
 `;
 
 const Card = styled.div`
-  position: relative; /* Added position relative to the card */
+  
   border-radius: 16px;
   box-shadow: 0 30px 30px -25px rgba(65, 51, 183, 0.25);
-  width: 100%;
+  width: 80%;
   font-family: Montserrat;
   padding: 1.5em 1.7em;
   background-color: var(--c-white);
   display: flex;
+  gap: 1em;
 
   opacity: 0;
+
+  /* Media query for screens with a maximum width of 767px (typical for mobile devices) */
+    @media (max-width: 767px) {
+      width: 100%;
+      flex-direction: column; /* Stack cards vertically on mobile */
+      text-align: center;
+    }
 `;
 
 const CardTitle = styled.h3`
@@ -82,6 +94,25 @@ const CardTitle = styled.h3`
   letter-spacing: -0.01em;
   font-family: Tahoma;
   margin: 0;
+`;
+
+const CardListTitle = styled.p`
+  color: #333;
+  margin-top: 1em;
+  margin-bottom: 0em;
+  font-weight: bold;
+`;
+
+const CardList = styled.ul`
+  margin-top: 0em;
+  margin-bottom: 1em;
+
+  /* Media query for screens with a maximum width of 767px (typical for mobile devices) */
+    @media (max-width: 767px) {
+      list-style-type: none;
+      padding: 0; /* Remove padding */
+      margin: 0; /* Remove margins */
+    }
 `;
 
 const CardInfo = styled.p`
@@ -94,10 +125,15 @@ const CardContentDiv = styled.div`
   width:100%;
 `;
 
-const CardImageDiv = styled.div`
-  overflow: visible;
-  position: relative;
-  
+const CardIconDiv = styled.div`
+  width:90%;
+  height:100%;
+  padding: 0.5em;
+
+  @media (max-width: 767px) {
+    align-self: center;
+    width:100%;
+  }
 `;
 
 const CardImage = styled.img`
@@ -106,6 +142,19 @@ const CardImage = styled.img`
   /* Set position to absolute position: absolute; */
   bottom: 1em; /* Adjust this value as needed to control the overlap */
   left: 0;
+  
+  align-self: center;
+
+  width:100%;
+  height: auto;
+
+  @media (max-width: 767px) {
+    align-self: center;
+
+    width:70%;
+    height: auto;
+  }
+
 `;
 
 const CardImageAnimated = styled(CardImage)`
@@ -124,14 +173,6 @@ const CardImageAnimated = styled(CardImage)`
     animation-delay: 0.6s;
   }
 `
-
-const CardImageLeft = styled(CardImageAnimated)`
-  margin-right: 3em; 
-`;
-
-const CardImageRight = styled(CardImageAnimated)`
-  margin-left: 3em; 
-`;
 
 const SpacerDiv = styled.div`
   height: 3em;
@@ -160,6 +201,11 @@ const CardAnimated = styled(Card)`
   }
 `;
 
+const ButtonLink = styled(Link)`
+    text-decoration: none;
+    
+`;
+
 const Button = styled.button`
     background-color: var(--c-yellow);
     border: none;
@@ -173,15 +219,14 @@ const Button = styled.button`
     box-shadow: inset 0 0 0 0.09px black;
   
     text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 15px;
     padding: 15px 30px;
 
-    
+    @media (max-width: 767px) {
+      align-self: center;
+    }
   
     &:hover {
-        box-shadow: inset 250px 0 0 0 black;
+        box-shadow: inset 350px 0 0 0 black;
         transform: scale(1.1);
     }
 `;
@@ -193,69 +238,108 @@ const Servicespage = () => {
         <CardAnimated>
           <CardContentDiv>
             <CardTitle>Our services</CardTitle>
-            <CardInfo>We do whatever you want but here are some predefined things</CardInfo>
-            <SpacerDiv/>
+            <CardInfo>Welcome to a transformative digital experience! Elevate your online presence with our expert web development skills, designed to build trust with your clients, attract new customers, and boost sales. From fully customized solutions to rivalling industry giants, our websites not only showcase professionalism but also generate leads and instill confidence in your clients.
+<br/><br/>
+But that's not all -- we understand the broader business landscape. Discover hidden expenses and save time with our automation solutions. Our free automation audit can unveil the potential for efficiency, helping you streamline processes and minimize the risk of human errors.
+<br/><br/>
+And if you're facing unique business challenges, we're here to be your problem-solving ally. Share your concerns, and our in-depth analysis will uncover tailored solutions designed just for you. Don't hesitate to reach out; asking for advice is always complimentary.
+<br/><br/>
+Embark on a journey where your website becomes a powerful tool, your processes become streamlined, and your challenges become opportunities. Let's shape your digital success together!</CardInfo>
           </CardContentDiv>
         </CardAnimated>
 
         <CardAnimated>
+          <MobileView>
+            <CardIconDiv>
+              <CardImageAnimated src={websiteIcon} />
+            </CardIconDiv>
+          </MobileView>
           <CardContentDiv>
             <CardTitle>Websites</CardTitle>
             <CardInfo>
-              You want a professional and interactive website that. <br />
-              list things like: fully customized, whatever you can think of is possible, website like the big players,
-              come across as more professional, generate more leads, gain trust with clients
+            Elevate your online presence with a meticulously crafted website, the cornerstone for establishing trust with your clients, attracting new customers, and skyrocketing your sales.<br/>
+
+Unlock the potential of fully customized web solutions where every idea transforms into reality. Your website can rival the industry giants, exuding professionalism that resonates with your audience. Immerse your visitors in an experience that not only showcases your expertise but also instills confidence, fostering trust with potential clients. Generate a steady stream of leads and position yourself among the top players in your field by harnessing the power of a professionally designed and optimized website.
             </CardInfo>
-            <ul>
-              <li>Fully customized</li>
-              <li>You can imagine it, we build it</li>
-              <li>Website like the big players</li>
-              <li>Come across more professional</li>
+            <CardListTitle>Our websites are:</CardListTitle>
+            <CardList>
+              <li>Fully customizable</li>
+              <li>Optimizes website</li>
+              <li>Rank higher on Google</li>
+              <li>Gain more credibility</li>
               <li>Generate more leads</li>
-              <li>Gain trust with clients</li>
-            </ul>
+              <li>Boost sales</li>
+              <li>...</li>
+            </CardList>
             <SpacerDiv/>
-            <Button>Get in touch!</Button>
+            <ButtonLink to="/Contact">
+              <Button>Let's start building!</Button>
+            </ButtonLink>
           </CardContentDiv>
-          <CardImageDiv>
-            <CardImageRight src={codingImg} />
-          </CardImageDiv>
+          <BrowserView>
+            <CardIconDiv>
+              <CardImageAnimated src={websiteIcon} />
+            </CardIconDiv>
+          </BrowserView>
         </CardAnimated>
 
         <CardAnimated>
-          <CardImageDiv>
-            <CardImageLeft src={codingImg} />
-          </CardImageDiv>
+          <BrowserView>
+            <CardIconDiv>
+              <CardImageAnimated src={automationIcon} />
+            </CardIconDiv>
+          </BrowserView>
+          <MobileView>
+            <CardIconDiv>
+              <CardImageAnimated src={automationIcon} />
+            </CardIconDiv>
+          </MobileView>
+
           <CardContentDiv>
             <CardTitle>Automation</CardTitle>
-            <CardInfo>You might not realize, but you are doing unnecessary work. Save time, effort and create ease of mind <br/>list stuff like the things we automate, business processes, AI solutions, marketing campaings, crm, ...<br/><br/>We do audits and implementations</CardInfo>
-            <ul>
-              <li>Business processes</li>
-              <li>Artificial intelligence solutions</li>
-              <li>Marketing campaigns</li>
-              <li>CRM</li>
+            <CardInfo>Discover hidden expenses you might be overlooking. Within your business, numerous repetitive tasks could be draining your resources without you even realizing it. Embrace the power of automation to streamline these processes, not only saving you valuable time and money but also minimizing the risk of human errors.<br/><br/>Unlock the potential for efficiency and cost-effectiveness by taking advantage of our complimentary automation audit. Let us unveil the untapped opportunities for time and financial savings through our tailored automation solutions!</CardInfo>
+            <CardListTitle>Automation solutions:</CardListTitle>
+            <CardList>
+              <li>Automate paperwork</li>
+              <li>Follow up with customers</li>
+              <li>Run marketing campaigns</li>
+              <li>Artificial intelligence (AI) solutions</li>
               <li>...</li>
-            </ul>
+            </CardList>
             <SpacerDiv/>
-            <Button>Get in touch!</Button>
+            <ButtonLink to="/Contact">
+              <Button>Let's get automating!</Button>
+            </ButtonLink>
           </CardContentDiv>
         </CardAnimated>
 
         <CardAnimated>
+        <MobileView>
+            <CardIconDiv>
+                <CardImageAnimated src={customIcon} />
+            </CardIconDiv>
+          </MobileView>
         <CardContentDiv>
           <CardTitle>Custom Solutions</CardTitle>
-          <CardInfo>Whatever you can think of, we can do it. <br/>list things like, custom software, programs, algorithms, Artificial intelligence, </CardInfo>
-          <ul>
-            <li>Custom software solutions</li>
-            <li>Artificial intelligence solutions</li>
-            <li>Whatever you want ya know</li>
-          </ul>
+          <CardInfo>Navigate through business challenges with confidence as we stand ready to be your problem-solving ally! Share the concerns that keep you awake at night, and let us conduct a comprehensive analysis to unveil optimal solutions tailored specifically for you.<br/><br/>Don't hesitate to reach out, asking is always free. Your journey towards resolution begins with a simple conversation.</CardInfo>
+          <CardListTitle>Our solutions are:</CardListTitle>
+          <CardList>
+            <li>Tailored to your issue</li>
+            <li>Tackling problems at their core</li>
+            <li>Easy maintainable</li>
+            <li>Professionally documented</li>
+            <li>...</li>
+          </CardList>
           <SpacerDiv/>
-          <Button>Get in touch!</Button>
+          <ButtonLink to="/Contact">
+            <Button>Get in touch!</Button>
+          </ButtonLink>
           </CardContentDiv>
-          <CardImageDiv>
-            <CardImageRight src={codingImg} />
-          </CardImageDiv>
+          <BrowserView>
+            <CardIconDiv>
+                <CardImageAnimated src={customIcon} />
+            </CardIconDiv>
+          </BrowserView>
         </CardAnimated>
       </CardDiv>
     </div>

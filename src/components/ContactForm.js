@@ -59,6 +59,7 @@ const CardInfo = styled.p`
 const FormDiv = styled.div`
   display: flex;
   justify-content: center;
+  width: 100%;
 `;
 
 const Form = styled.form`
@@ -75,12 +76,23 @@ const Label = styled.label`
   margin-bottom: 10px;
   font-family:Montserrat;
   font-weight: bolder;
+
+  
+`;
+
+const ReqLabel = styled(Label)`
+  &:after{
+    content:" *";
+    color: red;
+  }
 `;
 
 const Input = styled.input`
   display: block;
-  width: 100%;
+  width: 98%;
   margin-bottom: 15px;
+  margin-right:5px;
+
   font-family:Montserrat;
   border-radius: 10px;
   outline: 2px solid #333;
@@ -89,6 +101,10 @@ const Input = styled.input`
   outline-offset: 3px;
   padding: 10px 1rem;
   transition: outline 0.25s ease;
+
+  @media (max-width: 767px) {
+    width: 95%;
+  }
 
   &:hover {
     outline: 2px solid var(--c-yellow);
@@ -104,7 +120,7 @@ const Input = styled.input`
 
 const TextArea = styled.textarea`
   display: block;
-  width: 100%;
+  width: 98%;
   margin-bottom: 15px;
   font-family:Montserrat;
   border-radius: 10px;
@@ -115,6 +131,10 @@ const TextArea = styled.textarea`
   padding: 10px 1rem;
   resize: vertical;
   transition: outline 0.25s ease;
+
+  @media (max-width: 767px) {
+    width: 95%;
+  }
 
   &:hover {
     outline: 2px solid var(--c-yellow);
@@ -147,12 +167,14 @@ const Button = styled.button`
     padding: 15px 30px;
 
     margin-top: 2em;
+    margin-right:2em;
 
     align-self: flex-end;
 
     @media (max-width: 767px) {
       align-self: center;
-  }
+      margin-right:0;
+    }
   
     &:hover {
         box-shadow: inset 250px 0 0 0 black;
@@ -175,7 +197,7 @@ const ContactForm = () => {
          console.log(error);
      });
      e.target.reset();
-     window.alert("Thank you for reaching out. Your message has been sent. We will get back to you as soon as possible");
+     window.alert("Thank you for reaching out! We will get back to you as soon as possible");
  };
 
   return (
@@ -183,16 +205,19 @@ const ContactForm = () => {
       <CardDiv>
         <Card>
           <CardTitle>Contact us</CardTitle>
-          <CardInfo>Curious if we can be helpful to you? TODO lorem ipmsum dolomitus dongoren dongodon <br/>We will get back to you as soon as possible. </CardInfo>        
+          <CardInfo>Want to start working with us directly, or do you still have some questions? Don't hesitate to reach out!</CardInfo> 
           <FormDiv>
             <Form onSubmit={sendEmail}>
-                <Label for="name">Your Name:</Label>
+                <ReqLabel for="name">Your Name</ReqLabel>
                 <Input type="text" id="name" name="name" placeholder='Type your name here...' required/>
 
-                <Label for="email">Your Email:</Label>
+                <ReqLabel for="email">Your Email</ReqLabel>
                 <Input type="email" id="email" name="email" placeholder='Type your email adress here...' required/>
+                
+                <Label for="phone">Your phone number</Label>
+                <Input type="tel" id="phone" name="phone" placeholder='Type your phone number here...'/>
 
-                <Label for="message">Message:</Label>
+                <ReqLabel for="message">Message</ReqLabel>
                 <TextArea id="message" name="message" rows="8" placeholder='Type message or question here...' required></TextArea>
 
                 <Button type="submit">Send Email</Button>

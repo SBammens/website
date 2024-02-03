@@ -228,9 +228,9 @@ const Header = () => {
           <NavigationItem>
             <NavLink to="/">Home</NavLink>
           </NavigationItem>
-          <NavigationItem>
+          {/* <NavigationItem>
             <NavLink to="/About">About</NavLink>
-          </NavigationItem>
+          </NavigationItem> */}
           <NavigationItem>
             <NavLink to="/Services">Services</NavLink>
           </NavigationItem>

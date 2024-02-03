@@ -177,14 +177,12 @@ const Homepage = () => {
 
     const optionList = [
         ["Websites", "Show of your products and services on a professional custom website where everything can be changed to fit your liking.", ["Professional website", "Hosting and maintenance", "Custom features"]],
-        ["Automation", "Automate repetitive tasks to increase efficiency and prevent human errors", ["Efficiency audit", "Solutions provided", "Extreme ROI (TODO)"]],
+        ["Automation", "Automate repetitive tasks to increase efficiency and prevent human errors", ["Free automation audit", "Save time and money", "Up-to-date solutions"]],
         ["Custom Solutions", "Sometimes you just need a computer guy or electronics engineer.", ["Garantueed satisfaction", "Close cooperation", "Competitve pricing"]],
     ];
 
   return (
     <div>
-        {/* <Header/> */}
-        {/* <Header2/> */}
 
         <PageDiv>
             <section>
@@ -219,12 +217,12 @@ const Homepage = () => {
             <section>
                 <CTADiv>
                     <CTATxtDiv>
-                        <h3>Get better today</h3>
-                        <p>So what are you waiting for? Want to make your business more competetive? <br/> lorem ipsum todo todo todo dolerem al;kfjdlkasjfa</p>
+                        <h3>Improve your business today</h3>
+                        <p>What are you waiting for? Increase sales or boost your efficiency today!!</p>
                     </CTATxtDiv>
                     <CTAButtonDiv>
                         <ButtonLink to="/Services">
-                            <CTAFooterButton>Get started!</CTAFooterButton>
+                            <CTAFooterButton>Get in touch!</CTAFooterButton>
                         </ButtonLink>
                     </CTAButtonDiv>
                 </CTADiv>
