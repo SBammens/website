@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.fd699e52.css",
-    "main.js": "/website/static/js/main.05f5894c.js",
-    "static/js/787.e337ad4a.chunk.js": "/website/static/js/787.e337ad4a.chunk.js",
-    "static/media/ide.png": "/website/static/media/ide.8d7cbc5dbb34ccb27619.png",
-    "static/media/automation.png": "/website/static/media/automation.5c71914163b6c86409c0.png",
-    "static/media/increase_inv.png": "/website/static/media/increase_inv.7026037b80bb342582e4.png",
-    "static/media/ai_inv.png": "/website/static/media/ai_inv.bdc4b93c092682d56673.png",
-    "static/media/engineering_inv.png": "/website/static/media/engineering_inv.3c77fe7e158a20bdf333.png",
-    "static/media/responsive-design.png": "/website/static/media/responsive-design.5cc9fe0789d39719b673.png",
-    "static/media/public-relation_inv.png": "/website/static/media/public-relation_inv.b6f98d58274980261065.png",
-    "index.html": "/website/index.html",
-    "main.fd699e52.css.map": "/website/static/css/main.fd699e52.css.map",
-    "main.05f5894c.js.map": "/website/static/js/main.05f5894c.js.map",
-    "787.e337ad4a.chunk.js.map": "/website/static/js/787.e337ad4a.chunk.js.map"
+    "main.css": "/static/css/main.fd699e52.css",
+    "main.js": "/static/js/main.dbb941e3.js",
+    "static/js/787.e337ad4a.chunk.js": "/static/js/787.e337ad4a.chunk.js",
+    "static/media/ide.png": "/static/media/ide.8d7cbc5dbb34ccb27619.png",
+    "static/media/automation.png": "/static/media/automation.5c71914163b6c86409c0.png",
+    "static/media/increase_inv.png": "/static/media/increase_inv.7026037b80bb342582e4.png",
+    "static/media/ai_inv.png": "/static/media/ai_inv.bdc4b93c092682d56673.png",
+    "static/media/engineering_inv.png": "/static/media/engineering_inv.3c77fe7e158a20bdf333.png",
+    "static/media/responsive-design.png": "/static/media/responsive-design.5cc9fe0789d39719b673.png",
+    "static/media/public-relation_inv.png": "/static/media/public-relation_inv.b6f98d58274980261065.png",
+    "index.html": "/index.html",
+    "main.fd699e52.css.map": "/static/css/main.fd699e52.css.map",
+    "main.dbb941e3.js.map": "/static/js/main.dbb941e3.js.map",
+    "787.e337ad4a.chunk.js.map": "/static/js/787.e337ad4a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fd699e52.css",
-    "static/js/main.05f5894c.js"
+    "static/js/main.dbb941e3.js"
   ]
 }
