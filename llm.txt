@@ -1,0 +1,15 @@
+[brand]
+name = Samplications
+founded_by = Sam
+founded_in = 2025
+location = Darmstadt
+website = https://samplications.com
+mission = Supporting the growth of medium sized companies by providing web, automation, and AI solutions
+
+[offerings]
+- Custom website development
+- Custom automation and software development
+- Custom AI integrations
+
+[contact]
+email = info@samplications.com
