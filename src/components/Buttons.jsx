@@ -57,3 +57,8 @@ export const RegularLinkMod = styled(RegularLink)`
   }
 
 `;
+
+export const NakedLink = styled(RouterLink)`
+  width:100%;
+  height:100%;
+`;

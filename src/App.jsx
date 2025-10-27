@@ -43,6 +43,7 @@ const GreySection = styled(Section)`
 
 const SectionCont = styled.div`
   width: var(--v-cont-width);
+  max-width: 1500px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -169,7 +170,7 @@ function App() {
     {
       svg: IconCompass,
       title: "Consultation",
-      text: "We start a conversation to see what your specific problem is see if, and how we can help",
+      text: "We start a conversation to explore the hurdles your business is dealing with and how we can help in overcoming them",
     },
     { 
       svg:IconMap,
@@ -179,12 +180,12 @@ function App() {
     {
       svg: IconCogwheel,
       title: "Development",
-      text: "Once a plan is established we start our development process. During this period you will receive regular updates on its status. This keeps you informed and allows us to address any concerns in early stages.",
+      text: "Once a plan is established we start our development process. During this period you will receive regular updates on its status. This keeps you informed and allows us to address any concerns in early stages",
     },
     {
       svg: IconGift,
       title: "Delivery",
-      text: "We go over the final result with you to ensure your expectations are met and all of the set requirements are fulfilled.",
+      text: "We go over the final result with you to ensure your expectations are met and all of the set requirements are fulfilled",
     },
   ];
 
