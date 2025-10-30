@@ -16,6 +16,13 @@ import PortofolioPage from './pages/PortofolioPage.jsx';
 import ImpressumPage from './pages/ImpressumPage.jsx';
 import PrivacyPage from './pages/PrivacyPage.jsx';
 import DisclaimerPage from './pages/DisclaimerPage.jsx';
+import BucketListerPrivacyPage from './pages/privacypages/BucketListerPrivacyPage.jsx';
+import ScoreboardPrivacyPage from './pages/privacypages/ScoreboardPrivacyPage.jsx';
+import MealPickerPrivacyPage from './pages/privacypages/MealPickerPrivacyPage.jsx';
+import PandapointsTrackerPrivacyPage from './pages/privacypages/PandapointsTrackerPrivacyPage.jsx';
+import HeurecaPrivacyPage from './pages/privacypages/HeurecaPrivacyPage.jsx';
+import TikTakPrivacyPage from './pages/privacypages/TikTakPrivacyPage.jsx';
+import GoalReacherPrivacyPage from './pages/privacypages/GoalReacherPrivacyPage.jsx';
 
 
 // Custom component to handle scrolling to top on route change
@@ -40,6 +47,14 @@ const RootComponent = () => (
       <Route exact path="/Impressum" element={<ImpressumPage />} />
       <Route exact path="/Disclaimer" element={<DisclaimerPage />} />
       <Route exact path="/Privacy" element={<PrivacyPage />} />
+
+      <Route exact path="/Apps/BucketLister" element={<BucketListerPrivacyPage/>}/>
+      <Route exact path="/Apps/Scoreboard" element={<ScoreboardPrivacyPage/>}/>
+      <Route exact path="/Apps/MealPicker" element={<MealPickerPrivacyPage/>}/>
+      <Route exact path="/Apps/PandaPointsTracker" element={<PandapointsTrackerPrivacyPage/>}/>
+      <Route exact path="/Apps/Heureca" element={<HeurecaPrivacyPage/>}/>
+      <Route exact path="/Apps/Tiktak" element={<TikTakPrivacyPage/>}/>
+      <Route exact path="/Apps/GoalReacher" element={<GoalReacherPrivacyPage/>}/>
     </Routes>
     <Footer />
   </>
