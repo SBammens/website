@@ -320,7 +320,7 @@ const ContactPage = () => {
 
     try {
       const response = await axios.post(
-        "https://openai-backend-6999.onrender.com/api/chat",
+        "https://openai-backend-6999.onrender.com/api/samplications/chat",
         {
           model: "gpt-4o-mini",
           messages: [
