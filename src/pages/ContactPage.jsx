@@ -352,14 +352,15 @@ Friendly, professional, concise, and empathetic.\
 Avoid jargon; focus on clarity.\
 \
 Flow:\
-Greet.\
-Ask about their project.\
-Validate needs and explain how we can help.\
-Address concerns.\
-Wrap up and confirm next steps.\
+Greet\
+Ask about their project\
+Validate needs and explain how we can help\
+Address concerns\
+Ask email we can reach out on (never in the same message where you thank them for their time)\
+Wrap up and confirm next steps\
 \
 Rules:\
-Never provide quotes or promises.\
+Never provide quotes or promises\
 If asked technical details beyond scope: "Let me connect you with our team for a detailed answer." and wrap up (dont forget to thank them for their time',
             },
             ...messages.map((msg) => ({
@@ -385,7 +386,7 @@ If asked technical details beyond scope: "Let me connect you with our team for a
           .includes("thank you for your time") ||
         response.data.choices[0].message.content
           .toLowerCase()
-          .includes("Our team will review your requirements")
+          .includes("bedankt voor je tijd")
       ) {
         setIsChatEnded(true);
       }
