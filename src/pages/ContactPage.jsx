@@ -260,6 +260,29 @@ const ChatHeader = styled.div`
 `;
 
 const ContactPage = () => {
+
+  const [conversationId, setConversationID] = useState("NOTSET");
+
+  function generateUUID() {
+    // fallback to pseudo-random v4 implementation
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
+      const r = (Math.random() * 16) | 0;
+      const v = c === "x" ? r : (r & 0x3) | 0x8;
+      return v.toString(16);
+    });
+  }
+
+  useEffect(() => {
+    const uuid = generateUUID();
+    setConversationID(uuid);
+    console.log(conversationId);
+  }, []);
+
+  useEffect(() => {
+  console.log(conversationId);
+  }, [conversationId]); // This runs whenever conversationId changes
+
+
   // EMAIL FUNCTIONS
   const form = useRef();
   const [success, setSuccess] = useState(false);
@@ -323,6 +346,7 @@ const ContactPage = () => {
         "https://openai-backend-6999.onrender.com/api/samplications/chat",
         {
           model: "gpt-4o-mini",
+          conversation_id: conversationId,
           messages: [
             {
               role: "system",
@@ -373,7 +397,7 @@ If asked technical details beyond scope: "Let me connect you with our team for a
       );
 
       const botMessage = {
-        text: response.data.choices[0].message.content,
+        text: response.data.result.choices[0].message.content,
         sender: "bot",
         role: "assistant",
       };
@@ -381,10 +405,10 @@ If asked technical details beyond scope: "Let me connect you with our team for a
 
       // Check if the bot's message indicates the end of the conversation
       if (
-        response.data.choices[0].message.content
+        response.data.result.choices[0].message.content
           .toLowerCase()
           .includes("thank you for your time") ||
-        response.data.choices[0].message.content
+        response.data.result.choices[0].message.content
           .toLowerCase()
           .includes("bedankt voor je tijd")
       ) {
