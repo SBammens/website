@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import CardItem from "./CardItem";
+import ImgAutomation from '../assets/desktop_automation.png'
+
 
 const Container = styled.div`
   margin: 0 auto;
@@ -128,7 +130,7 @@ const TabsSection = () => {
       title2: "IT consulting & support",
       desc: "Expert guidance and support to optimize your IT infrastructure. Improve efficiency and keep your business running smoothly.",
       image:
-        "https://cdn.prod.website-files.com/68ebb065705e6d2f787709db/68ebb22e4635867a612f5edc_28baa91f-9a6e-4f17-b90c-37ea13c38442.avif",
+        ImgAutomation,
       alt: "modern tech interface",
     },
     {
