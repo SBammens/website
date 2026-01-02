@@ -10,6 +10,7 @@ import {
 import ImgATS from "../assets/partners/ATS.png";
 import ImgElevatePilates from "../assets/partners/Elevate_Pilates.png";
 import ImgVanhexCarcare from "../assets/partners/Vanhexcarcare.png";
+import ImgAperio from "../assets/partners/Aperio_logo.png";
 
 const PageDiv = styled.div`
   display: grid;
@@ -173,6 +174,7 @@ const PortofolioPage = () => {
             <SubTitle>We provided a website that:</SubTitle>
             <UnorderedList>
               <ListItem>Looks beautiful on mobile and dekstop devices</ListItem>
+              <ListItem>Has an integrated database for video courses</ListItem>
               <ListItem>
                 Is easier to find online by applying the latest Search Engine
                 Optimization (SEO) techniques
@@ -191,6 +193,31 @@ const PortofolioPage = () => {
               rel="noopener"
             >
               <PortImg src={ImgElevatePilates} />
+            </NakedLink>
+          </CardImgDiv>
+        </CardBody>
+
+        <CardBody>
+          <CardTextDiv>
+            <h3>Aperio Space Technologies</h3>
+            <Desc>
+              Aperio Space GmbH is a young space tech company aimed at providing optimized routing algorithms for faster, efficient, and more resilient data routing within satellite constellations.
+            </Desc>
+
+            <SubTitle>We provided:</SubTitle>
+            <UnorderedList>
+              <ListItem>Project management and expertise for their in-orbit demonstration</ListItem>
+              <ListItem>Overal algorithm and architecture consultancy</ListItem>
+            </UnorderedList>
+          </CardTextDiv>
+
+          <CardImgDiv>
+            <NakedLink
+              to="https://aperiospace.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              <PortImg src={ImgAperio} />
             </NakedLink>
           </CardImgDiv>
         </CardBody>
