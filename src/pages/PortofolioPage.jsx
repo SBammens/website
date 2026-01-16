@@ -11,6 +11,8 @@ import ImgATS from "../assets/partners/ATS.png";
 import ImgElevatePilates from "../assets/partners/Elevate_Pilates.png";
 import ImgVanhexCarcare from "../assets/partners/Vanhexcarcare.png";
 import ImgAperio from "../assets/partners/Aperio_logo.png";
+// import ImgESA from "../assets/partners/ESA_logo.png";
+
 
 const PageDiv = styled.div`
   display: grid;
@@ -129,6 +131,42 @@ const PortofolioPage = () => {
           Have a look at all the people that were happy with our service.
           Servicing partners of all industries.
         </p>
+
+        {/* <CardBody>
+          <CardTextDiv>
+            <h3>European Space Agency - Operations Center (ESOC)</h3>
+            <Desc>
+              ESA ESOC operates most satellites under the supervision of the European Space Agency.
+              Our services have been mostly related to the interplanetary department.
+            </Desc>
+
+            <SubTitle>We provided:</SubTitle>
+            <UnorderedList>
+              <ListItem>
+                Increased level of automation on the operational system which directly interacts with the satellite.
+              </ListItem>
+              <ListItem>
+                Set-up and configuration of a server, serving as a suite for tools.
+              </ListItem>
+              <ListItem>
+                Multiple automations for repetitive tasks performed by the operators.
+              </ListItem>
+              <ListItem>
+                A set of tools to aid in reporting.
+              </ListItem>
+            </UnorderedList>
+          </CardTextDiv>
+
+          <CardImgDiv>
+            <NakedLink
+              to="https://www.esa.int/"
+              target="_blank"
+              rel="noopener"
+            >
+              <PortImg src={ImgESA} />
+            </NakedLink>
+          </CardImgDiv>
+        </CardBody> */}
 
         <CardBody>
           <CardTextDiv>
