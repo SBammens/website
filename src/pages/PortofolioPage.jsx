@@ -126,9 +126,9 @@ const PortofolioPage = () => {
   return (
     <PageDiv>
       <ContentDiv>
-        <h1>Happy clients</h1>
+        <h1>Past Projects</h1>
         <p>
-          Have a look at all the people that were happy with our service.
+          Have a look at our past projects.
           Servicing partners of all industries.
         </p>
 
