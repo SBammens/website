@@ -190,8 +190,8 @@ const Hero = () => {
         <SubContentDiv>
           <SubTxtDiv>
             <SubTxt>
-              Custom web, IT, and AI automation for small and medium businesses. <br />
-              Built by industry professionals for efficiency and scalability.
+              Custom web, IT, and AI automation for medium sized businesses. <br />
+              Built by an industry professional for efficiency and scalability.
             </SubTxt>
           </SubTxtDiv>
 

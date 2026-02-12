@@ -81,17 +81,17 @@ const FAQ = () => {
     {
       question: 'Which services are available?',
       answer:
-        'We deliver web development, IT support, automation, and AI solutions tailored to your business needs and infrastructure.',
+        "I deliver web development, IT support, automation, and AI solutions tailored to your business' needs and infrastructure.",
     },
     {
       question: 'How are solutions tailored?',
       answer:
-        'We review your systems and goals, then design solutions that fit your operations for efficiency and growth.',
+        'I review your systems and goals, then design solutions that fit your operations for efficiency and growth.',
     },
     {
       question: 'What steps are in your process?',
       answer:
-        'We start with a consultation, then plan, implement, and support your project, keeping you updated throughout.',
+        'I start with a consultation, then plan, implement, and support your project, keeping you updated throughout.',
     },
     {
       question: 'How do I begin?',

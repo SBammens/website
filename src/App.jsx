@@ -201,7 +201,7 @@ function App() {
                 <div>
                   <h3>Partners in digital transformation</h3>
                   <p>
-                    Discover the businesses that trust our tailored web, IT,
+                    Discover the businesses that trust my tailored web, IT,
                     automation, and AI solutions to streamline operations and
                     drive results.
                   </p>
@@ -256,7 +256,7 @@ function App() {
                 <br />
                 with smart solutions
               </SloganTxt>
-              <ButtonLinkBigger to="/Contact">Contact us</ButtonLinkBigger>
+              <ButtonLinkBigger to="/Contact">Contact me</ButtonLinkBigger>
             </CenterDiv>
           </SectionCont>
         </GreySection>
@@ -267,8 +267,8 @@ function App() {
               <SectionTitle>FAQ</SectionTitle>
               <SlightlyBold>Your questions, answered simply</SlightlyBold>
               <ExploreTxt>
-                Explore clear answers about our web, IT, automation, and AI
-                services for small and medium businesses.
+                Explore clear answers about my web, IT, automation, and AI
+                services for medium sized businesses.
               </ExploreTxt>
 
               <FaqDiv>
