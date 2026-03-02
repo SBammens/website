@@ -15,7 +15,9 @@ const ImpressumPage = () => {
       <h4>Contact:</h4>
       <p>
         Email: info@samplications.com<br />
+        Phone: +491628968688<br />
         Website: samplications.com
+        
       </p>
 
       <h4>VAT Identification Number (USt-ID):</h4>
